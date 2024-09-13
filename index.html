@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <div class="relative">
+        <div id="main">
+          <h1 class="font-bold text-2xl text-black text-center mt-10 mb-10">
+            To Do List
+          </h1>
+          <div class="border-b border-gray-200">
+            <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+              <a
+                href="#"
+                class="border-indigo-500 text-indigo-600 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium"
+                aria-current="page"
+                >Barchasi</a
+              >
+              <a
+                href="#"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium"
+                >Bajarilganlar</a
+              >
+              <a
+                href="#"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium"
+                >Bajarilmaganlar</a
+              >
+            </nav>
+          </div>
+          <div id="list" class="flex flex-col gap-2 mt-12 text-black">
+            <!-- <div class="bg-cyan-700 px-[19px] py-[13px] flex flex-col gap-2">
+              <h2 class="font-bold text-xl">Design LMS system</h2>
+              <p class="">
+                <div class="flex flex-row gap-10">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eum, ducimus porro neque harum accusamus, nam magni atque quod tempora, perspiciatis magnam quibusdam! Deleniti ipsum voluptatem culpa veritatis corrupti error.</p>
+                  <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor sit, hic distinctio dignissimos voluptas ut quas, laboriosam sequi quos inventore provident tempora! Ut fugiat, eligendi cum vero similique eius blanditiis!</h4>
+                </div>
+              </p>
+              <div class="flex flex-row">
+                <p>08.02.2021</p>
+                <p class="ml-auto">Ochilov J.</p>
+              </div>
+            </div> -->
+          </div>
+          <div class="flex justify-center mt-10">
+            <button
+              id="btnModal"
+              class="bg-green-500 font-bold text-4xl px-6 py-6 rounded-[50%]"
+              onclick="showModal()"
+            >
+              <img src="./img/+.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div
+          id="model"
+          class="fixed top-[50px] left-0 w-[100%] z-100 hidden model"
+        >
+          <div class="flex justify-center items-center">
+            <div class="bg-cyan-100 w-[371px] flex flex-col p-4 gap-4 form">
+              <button onclick="remove()">
+                <img src="./img/remove-symbol 1.svg" alt="" class="ml-auto" />
+              </button>
+              <h1 class="font-bold text-center text-2xl">Yangi Topshiriq</h1>
+              <input
+                name="title"
+                type="text"
+                class="rounded-[15px] py-[10px] pl-4 text-[12px] outline outline-1"
+                placeholder="Topshiriq sarlavhasi"
+              />
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Write something.."
+                class="h-24 rounded-[15px] py-[10px] pl-4 outline outline-1"
+              ></textarea>
+              <input
+                type="text"
+                name="deadline"
+                class="rounded-[15px] py-[10px] pl-4 text-[12px] outline outline-1"
+                placeholder="Oxirgi muddat"
+              />
+              <input
+                type="text"
+                name="member"
+                class="rounded-[15px] py-[10px] pl-4 text-[12px] outline outline-1"
+                placeholder="Guruh a'zosi"
+              />
+              <div class="flex justify-center mt-10 mb-10">
+                <button
+                  onclick="saveTask()"
+                  class="bg-green-400 py-[10px] px-14 rounded-[15px]"
+                >
+                  Qo'shish
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
